@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakhi_community</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/community.css') }}">
+</head>
+<body>
+    <div class="main">
+        <div class="main-title">
+            <h1 id="title"><font style="color: orangered;">Mind</font>Set<font style="color: orangered">.Com</font>munity</h1>
+        </div>
+        <div class="container">
+            <div class="nav">
+                <div class="features">
+                    <p>Features</p>
+                </div>
+                <div class="user-friendly">
+                    <h2 id="user">User-friendly</h2>
+                    <p id="user-data">Chat without hesitation for everyone is welcomed!</p>
+                </div>
+                <div class="user-friendly">
+                    <h2 id="user">No spams please!</h2>
+                    <p id="user-data">Prevent spams please for welcoming atmosphere.</p>
+                </div>
+                <div class="user-friendly">
+                    <h2 id="user">Assisstance</h2>
+                    <p id="user-data">A platform to express yourself.</p>
+                </div>
+                <div class="btn">
+                    <a href="/home"><button id="back">Home</button></a>
+                </div>
+            </div>
+            <div class="main2">
+            <div class="chat-title">
+                <h2>Chat with people on this platform:)</h2>
+            </div>
+{% for row in data[0][::-1] %}
+
+            <div class="chat-area">
+                {% if row[0] != data[1] %}
+                <div class="first-div">
+                    <div class="profile1">
+                        <p id="letter">{{row[0][0]}}</p>
+                    </div>
+                    <div class="message">
+                        <h3 id="name">{{row[0]}}</h3>
+                        <p id="chat">{{row[1]}}</p>
+                    </div>
+                </div>
+
+                {% else %}
+                <div class="second-div">
+                    <div class="message">
+                        <h3 id="name">{{row[0]}}</h3>
+                        <p id="chat">{{row[1]}}</p>
+                    </div>
+                    <div class="profile2">
+                        <p id="letter">{{row[0][0]}}</p>
+                    </div>
+                </div>
+                {% endif %}
+        </div>
+{% endfor %}
+                <form method="POST">
+        <div class="type-space">
+            <div class="text">
+                <input type="text" id="text" name="text" placeholder="Enter message...">
+            </div>
+                    </form>
+            <div class="send">
+                <button id="send-btn" type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

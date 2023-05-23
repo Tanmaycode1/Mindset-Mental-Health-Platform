@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>MindSet</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="../static/yoga/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/yoga/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../static/yoga/assets/css/templatemo-training-studio.css">
+
+    </head>
+    
+    <body>
+    
+<style>
+      @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+*,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+.shape-box {
+    display:inline-table;
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    height: 430px;
+    margin: 10px 30px 20px;
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .12);
+    overflow: hidden;
+    width: 26%;
+}
+
+.shape-box_half {
+    overflow: hidden;
+    text-align: left;
+}
+
+.shape-box_half:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewY(53.5deg);
+    transform-origin: top left;
+    transition: \transform .4s;
+    background: #fff;
+    z-index: 1;
+}
+
+.shape-box>img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.shape-box_half figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 30px 30px;
+    transition: \transform .4s;
+    transform: translateY(100%);
+    z-index: 3;
+}
+
+.shape-box_half figcaption .show-cont {
+    position: absolute;
+    bottom: calc(100% + 30px);
+    left: 30px;
+    right: 30px;
+    transition: bottom .4s;
+}
+
+.card-no {
+    font-size: 36px;
+    color: orange;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.card-main-title {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #292b2c;
+}
+
+.card-content {
+    color: #9f9f9f;
+    margin-top: 20px;
+    line-height: 22px;
+    font-size: 15px;
+}
+
+.read-more-btn {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 600;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: orange;
+    color: #fff;
+    border-radius: 2px;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.read-more-btn:hover {
+    background-color: transparent;
+    color:orange;
+    border: 1px solid orange;
+
+
+}
+
+.shape-box_half>.after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: orange;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+/*On hover*/
+.shape-box_half:hover:before {
+    transform: skewY(20deg);
+}
+
+.shape-box_half:hover figcaption {
+    transform: translateY(0);
+}
+
+.shape-box_half:hover figcaption .show-cont {
+    bottom: 100%;
+}
+
+.shape-box_half:hover>.after {
+    opacity: 1;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 260px;
+  padding: 20px 1px;
+  margin: 10px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
+  border-radius: 10px;
+  background-color: #6B6ECC;
+  background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
+}
+
+.content {
+  padding: 20px;
+}
+
+.content .price {
+  color: white;
+  font-weight: 800;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+.content .description {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.content .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.64);
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(33 150 243);
+  border-radius: 0.5rem;
+  width: 90%;
+  text-shadow: 0px 4px 18px #2c3442;
+}
+
+
+button:hover{
+  background: transparent;
+  color: white;
+  border: 1px solid rgb(33 150 243);
+}
+</style>
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">Mind<em style="color: orangered;"> Set</em></a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="/home">Home</a></li>
+                            <li class="scroll-to-section"><a href="/community" >Community</a></li>
+                            <li class="scroll-to-section"><a href="/char">Virtual Friend</a></li>
+                            <li class="scroll-to-section"><a href="/yoga">Meditation</a></li>
+                            <li class="scroll-to-section"><a href="/logout">LogOut</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="../static/yoga/hi.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h2>GROW WITH <em style="color: orangered;">US</em></h2>
+                <div class="main-button scroll-to-section">
+                    <a href="#features" style="background-color: orangered;">Let's Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Choose <em style="color: orangered;">Program</em></h2>
+                        <img src="../static/yoga/assets/images/line-dec.png" alt="waves">
+                        <p>"Within you, there is a stillness and a sanctuary to which you can retreat at any time and be yourself." - Hermann Hesse</p>
+                    </div>
+                </div>
+                
+         
+    <!-- Causes Start -->
+    <div class="box-wrapper">
+      <center>  <figure class="shape-box shape-box_half">
+            <img src="../static/yoga/Untitled%20design.png" alt="">
+            <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+            <figcaption>
+                <div class="show-cont">
+                    <h3 class="card-no">01</h3>
+                    <h4 class="card-main-title">Meditation</h4>
+                </div>
+                <p class="card-content">Includes an AI yoga-pose detection feature that helps the patient do yoga and determine if the pose is being done correctly.</p>
+                <a href="/yoga" class="read-more-btn">Read More</a>
+            </figcaption>
+            <span class="after"></span>
+        </figure>
+        <figure class="shape-box shape-box_half">
+            <img src="../static/yoga/Untitled%20design2.png">
+            <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+            <figcaption>
+                <div class="show-cont">
+                    <h3 class="card-no">02</h3>
+                    <h4 class="card-main-title">Community</h4>
+                </div>
+                <p class="card-content">A community section is provided where everyone can connect and help each other with their problems.</p>
+                <a href="/community" class="read-more-btn">Get Started</a>
+            </figcaption>
+            <span class="after"></span>
+        </figure>
+        <figure class="shape-box shape-box_half">
+            <img src="../static/yoga/Untitled%20design3.png">
+            <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+            <figcaption>
+                <div class="show-cont">
+                    <h3 class="card-no">03</h3>
+                    <h4 class="card-main-title">Virutal Friend</h4>
+                </div>
+                <p class="card-content">An AI based Virtual friend is provided to which the patient can talk any of his problems.</p>
+                <a href="/char" class="read-more-btn">Get Started</a>
+            </figcaption>
+            <span class="after"></span>
+        </figure> 
+    </center>
+    </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>GET YOUR <em style="color: orangered;">SUBSCRIPTION NOW</em></h2>
+                        <img src="../static/yoga/assets/images/line-dec.png" alt="waves">
+                        <P>You subscribed to a service that offers free therapy and video calling. It can be helpful, but check for any limitations or costs. Use responsibly and make sure the service is reputable. It's important to prioritize your mental health and seek professional help when needed. This service can provide a convenient way to connect with a therapist and receive support.</P>
+                    </div>
+                </div>
+            </div>
+                
+                <center><div class="card">
+                  <div class="content">
+                    <div class="title">Premium Edition</div>
+                    <div class="price">₹1000</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
+                  </div>
+                    <button>
+                      Get now
+                    </button>
+              </div></center>
+
+
+    <script src="../static/yoga/assets/js/jquery-2.1.0.min.js"></script>
+    <script src="../static/yoga/assets/js/popper.js"></script>
+    <script src="../static/yoga/assets/js/bootstrap.min.js"></script>
+    <script src="../static/yoga/assets/js/scrollreveal.min.js"></script>
+    <script src="../static/yoga/assets/js/waypoints.min.js"></script>
+    <script src="../static/yoga/assets/js/jquery.counterup.min.js"></script>
+    <script src="../static/yoga/assets/js/imgfix.min.js"></script>
+    <script src="../static/yoga/assets/js/mixitup.js"></script>
+    <script src="../static/yoga/assets/js/accordions.js"></script>
+    <script src="../static/yoga/assets/js/custom.js"></script>
+
+  </body>
+</html>
