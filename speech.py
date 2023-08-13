@@ -7,7 +7,7 @@ import os
 import sys
 
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 engine = pyttsx3.init()
 
