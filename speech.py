@@ -6,7 +6,6 @@ import os
 import sys
 
 from langchain import PromptTemplate, LLMChain
-from langchain import HuggingFaceHub
 from langchain.llms import GooglePalm
 
 
