@@ -63,12 +63,4 @@ The project is organized into the following directories:
 - **Computer Vision:** OpenCV
 - **Frontend:** HTML, CSS, JavaScript
 
-## Contact
 
-If you have any questions or feedback, feel free to reach out:
-
-- **Email:** your.email@example.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/yourusername/)
-- **Twitter:** [@YourTwitterHandle](https://twitter.com/yourtwitterhandle)
-
-Thank you for exploring Mindset - the future of mental well-being!
